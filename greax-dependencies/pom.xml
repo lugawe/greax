@@ -16,6 +16,8 @@
     <packaging>pom</packaging>
 
     <properties>
+        <slf4j.version>2.0.7</slf4j.version>
+        <dropwizard.version>4.0.0</dropwizard.version>
         <junit.version>5.9.3</junit.version>
         <!-- maven plugins -->
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
@@ -25,6 +27,24 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.dropwizard</groupId>
+                <artifactId>dropwizard-core</artifactId>
+                <version>${dropwizard.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.dropwizard</groupId>
+                <artifactId>dropwizard-auth</artifactId>
+                <version>${dropwizard.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
