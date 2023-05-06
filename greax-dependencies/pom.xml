@@ -17,6 +17,7 @@
 
     <properties>
         <slf4j.version>2.0.7</slf4j.version>
+        <guava.version>31.1-jre</guava.version>
         <dropwizard.version>4.0.0</dropwizard.version>
         <junit.version>5.9.3</junit.version>
         <!-- maven plugins -->
@@ -32,6 +33,12 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
 
             <dependency>
