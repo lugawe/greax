@@ -22,6 +22,11 @@ public class InvalidMessageException extends Exception {
         super(cause);
     }
 
+    public InvalidMessageException(Message jmsMessage, String message) {
+        this(message);
+        setJmsMessage(jmsMessage);
+    }
+
     public Message getJmsMessage() {
         return jmsMessage;
     }
