@@ -35,8 +35,9 @@ public abstract class PacketProcessor<T extends Packet> implements MessageListen
     public void onMessage(Message message) {
         log.debug("onMessage");
         ListenableFuture<Packet> future = executorService.submit(() -> {
-            T packet = MessageUtils.extractPacket(message, packetClass);
             Sender sender = MessageUtils.extractSender(message);
+            T packet = MessageUtils.extractPacket(message, packetClass);
+            log.debug("execute");
             return execute(sender, packet);
         });
         Futures.addCallback(future, new PacketProcessorCallback(message), executorService);
