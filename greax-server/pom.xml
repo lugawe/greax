@@ -37,6 +37,16 @@
         </dependency>
 
         <dependency>
+            <groupId>io.dropwizard.modules</groupId>
+            <artifactId>dropwizard-kafka</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.vyarus</groupId>
+            <artifactId>dropwizard-guicey</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>

@@ -20,6 +20,7 @@
         <guava.version>31.1-jre</guava.version>
         <jms.version>3.1.0</jms.version>
         <dropwizard.version>4.0.0</dropwizard.version>
+        <dropwizard-guicey.version>7.0.0</dropwizard-guicey.version>
         <junit.version>5.9.3</junit.version>
         <!-- maven plugins -->
         <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
@@ -58,6 +59,18 @@
                 <groupId>io.dropwizard</groupId>
                 <artifactId>dropwizard-auth</artifactId>
                 <version>${dropwizard.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.dropwizard.modules</groupId>
+                <artifactId>dropwizard-kafka</artifactId>
+                <version>${dropwizard.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ru.vyarus</groupId>
+                <artifactId>dropwizard-guicey</artifactId>
+                <version>${dropwizard-guicey.version}</version>
             </dependency>
 
             <dependency>
