@@ -1,11 +1,13 @@
 package org.greax.server;
 
 import io.dropwizard.core.Application;
+import io.dropwizard.core.setup.Bootstrap;
 import io.dropwizard.core.setup.Environment;
 import org.greax.core.Constants;
 import org.greax.core.util.Lazy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.vyarus.dropwizard.guice.GuiceBundle;
 
 public class GreaxServer extends Application<GreaxServerConfiguration> {
 
@@ -15,6 +17,11 @@ public class GreaxServer extends Application<GreaxServerConfiguration> {
 
     public static void main(String[] args) throws Exception {
         instance.get().run(args);
+    }
+
+    @Override
+    public void initialize(Bootstrap<GreaxServerConfiguration> bootstrap) {
+        bootstrap.addBundle(GuiceBundle.builder().enableAutoConfig(Constants.SERVER_PACKAGE).build());
     }
 
     @Override
